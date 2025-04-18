@@ -1,13 +1,15 @@
-syntax = "proto3";
+syntax = "proto3"; // 指定使用 Protocol Buffers 的 proto3 语法
 
-package eth.transaction.v1;
+package eth.transaction.v1; // 定义包名，方便在不同项目中引用
 
+// Transactions 消息，表示一组以太坊交易
 message Transactions {
-  repeated Transaction transactions = 1;
+  repeated Transaction transactions = 1; // 包含多个 Transaction，每个 Transaction 表示一笔交易
 }
 
+// Transaction 消息，定义单个以太坊交易的结构
 message Transaction {
-  string from = 1;
-  string to = 2;
-  string hash = 3;
+  string from = 1; // 交易发送方地址
+  string to = 2;   // 交易接收方地址
+  string hash = 3; // 交易哈希值
 }

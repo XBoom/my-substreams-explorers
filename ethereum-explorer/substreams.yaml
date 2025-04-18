@@ -8,7 +8,7 @@ package:
     This packages holds simple modules to allow you to explore the Ethereum data model.  
 
 imports:
-  ethereum: https://github.com/streamingfast/firehose-ethereum/releases/download/v1.4.8/ethereum-v1.0.0.spkg
+  ethereum: ./ethereum-v1.0.0.spkg
 
 network: mainnet
 
@@ -66,7 +66,7 @@ modules:
       
 
 params:
-  # Filtering transactions with to = 0xdAC17F958D2ee523a2206206994597C13D831ec7 (USDT contract address)
-  map_filter_transactions: "to=0xdAC17F958D2ee523a2206206994597C13D831ec7"
-  # Getting the logs of the BoredApeYachtClub smart contract
-  map_contract_events: "0xbc4ca0eda7647a8ab7c2061c2e118a18a936f13d"
+   # Filtering transactions with to = Uniswap V2 Router address
+  map_filter_transactions: "to=0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D"
+  # Getting the logs of the Uniswap V2 Factory smart contract
+  map_contract_events: "0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f"

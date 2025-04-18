@@ -1,9 +1,10 @@
-syntax = "proto3";
+syntax = "proto3"; // 指定使用 Protocol Buffers 的 proto3 语法
 
-package eth.block_meta.v1;
+package eth.block_meta.v1; // 定义包名，方便在不同项目中引用
 
+// BlockMeta 消息，表示以太坊区块的元数据
 message BlockMeta {
-  uint64 number = 1;
-  string hash = 2;
-  string parent_hash = 3;
+  uint64 number = 1;       // 区块高度（区块编号）
+  string hash = 2;         // 当前区块的哈希值
+  string parent_hash = 3;  // 父区块的哈希值
 }

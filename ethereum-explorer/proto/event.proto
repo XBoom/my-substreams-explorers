@@ -1,13 +1,15 @@
-syntax = "proto3";
+syntax = "proto3"; // 指定使用 Protocol Buffers 的 proto3 语法
 
-package eth.event.v1;
+package eth.event.v1; // 定义包名，方便在不同项目中引用
 
+// Events 消息，表示一组以太坊事件
 message Events {
-    repeated Event events = 1;
+    repeated Event events = 1; // 包含多个 Event，每个 Event 表示一个事件
 }
 
+// Event 消息，定义单个以太坊事件的结构
 message Event {
-    string address = 1;
-    repeated string topics = 2;
-    string tx_hash = 3;
+    string address = 1;         // 事件发生的合约地址
+    repeated string topics = 2; // 事件的主题数组（用于事件过滤）
+    string tx_hash = 3;         // 事件所属的交易哈希
 }
